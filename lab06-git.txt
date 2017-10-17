@@ -1,4 +1,4 @@
-Git Intro 2 Activity
+﻿Git Intro 2 Activity
 ==================
 
 A. Form teams
@@ -16,7 +16,8 @@ This file is the deliverable for this lab, so make sure you do not forget to pus
 1.  List your team members below.
 
     ```
-
+	Zayne Johnson
+	Alani Johnson
 
 
     ```
@@ -34,7 +35,7 @@ Run the following commands.
 1.  What does `git help` do?
 
     ```
-	
+	Shows the common git commands and what they do.
 
     ```
 
@@ -42,7 +43,7 @@ Run the following commands.
 
     ```
 
-
+	Lists all of the git commands
 
     ```
 
@@ -69,7 +70,7 @@ Run `git status` before and after each of these commands.
 
     ```
 
-
+	Shows the current tracking status of a file in the git repo.
 
     ```
 
@@ -77,15 +78,14 @@ Run `git status` before and after each of these commands.
 
     ```
 
-
+	Adding a file snapshots it in preparation for versioning.
 
     ```
 
 3.  What does `git commit -m "Add our names."` do?
 
     ```
-
-
+	Committing records the snapshot permanantly to the version 	history.
 
     ```
 
@@ -105,7 +105,7 @@ Run `git status` before and after each of these commands.
 4.  What does `git add .` do? What do you think `.` means?
 
     ```
-
+	The indicates that all files should be added
 
 
     ```
@@ -113,7 +113,7 @@ Run `git status` before and after each of these commands.
 5.  What does `git commit` (without -m) do?
 
     ```
-
+	Opens the editor to write a commit message
 
 
     ```
@@ -122,7 +122,7 @@ Run `git status` before and after each of these commands.
     good practice) what command would you use?
 
     ```
-
+	git commit. Using -m limits the length of the message to 50 	characters.
 
 
     ```
@@ -130,7 +130,7 @@ Run `git status` before and after each of these commands.
 7.  What does `git log do`?
 
     ```
-
+	Shows the history of commits.
 
 
     ```
@@ -162,7 +162,7 @@ Run the following commands:
 
     ```
 
-
+	The snapshot has been taken and is ready to be permanently 	placed in the version history.
 
     ```
 
@@ -170,14 +170,14 @@ Run the following commands:
 
     ```
 
-
+	File has not been snapshotted
 
     ```
 
     **Untracked**
 
     ```
-
+	Git doesn't know about the file
 
 
     ```
@@ -185,7 +185,7 @@ Run the following commands:
 1.  If you run `git commit` what changes will be committed (***DON’T DO IT***)?
 
     ```
-
+	Only the modification of the name file will be saved.
 
 
     ```
@@ -194,7 +194,8 @@ Run the following commands:
 
     ```
 
-
+	git add names.txt
+	git commit names.txt
 
     ```
 
@@ -202,7 +203,7 @@ Run the following commands:
 
     ```
 
-
+	git reset
 
     ```
 
@@ -215,15 +216,15 @@ Run the following commands:
 
     ```
 
-
+	Shows file differences that haven't been staged
 
     ```
 
 2.  What does `git diff --cached` display?
 
     ```
-
-
+	
+	Views the stages you changed for the next commit
 
     ```
 
@@ -232,7 +233,9 @@ Run the following commands:
     confirm they worked.
 
     ```
-
+	git reset names.txt
+	git add movies.txt
+	git commit -m "Added movies.txt"
 
 
     ```
@@ -242,7 +245,7 @@ Run the following commands:
     going on.
 
     ```
-
+	movies.txt has the status modified beacuse git is tracking 	the modifications made to the file
 
 
     ```
@@ -252,7 +255,7 @@ Run the following commands:
 
     ```
 
-
+	git doesn't let you delete locally moditified files. 
 
     ```
 
@@ -260,8 +263,8 @@ Run the following commands:
     and explain.
 
     ```
-
-
+	
+	The file movies.txt was deleted and a new file last-movies.txt was created. The new is untracked.
 
     ```
 
@@ -270,7 +273,8 @@ Run the following commands:
     Execute them.
 
     ```
-
+	git add .
+	git commit -m "Modified names, Added foods, renamed movies"
 
 
     ```
@@ -279,7 +283,7 @@ Run the following commands:
     same thing. What does it hold?
 
     ```
-
+	Frozen state of the working tree.
 
 
     ```
@@ -288,7 +292,7 @@ Run the following commands:
     commit?
 
     ```
-
+	Staging incrementally leaves less changes to be staged in 	the working tree, but it also allows you to revert to many 	different versions and track individual changes.
 
 
     ```
@@ -307,8 +311,10 @@ Run the following commands:
 1.  What does `git reset --soft ``"HEAD^" `do?
 
     ```
-
-
+	
+	--soft doesn't touch the working tree
+	"Head^" indicates the first parent of the tip of the current branch
+	resets the head to the last commit, but the changed files remain locally changed
 
     ```
 
@@ -325,7 +331,7 @@ Run the following commands:
 
     ```
 
-
+	resets the current branch one commit backwards
 
     ```
 
@@ -333,20 +339,23 @@ Run the following commands:
 
     ```
 
-
+	hard - removes all commits up to a specified commit. The head is actually recommitted
+	soft - tells git to reset the head to another commit. The changed files become staged
 
     ```
 
 3.  What do you think `HEAD` means?
 
     ```
-
-
+	HEAD - tip of the current branch; most recent commit
+	
     ```
 
 4.  What do you think `HEAD^` means?
 
     ```
+
+	"Head^" indicates the first parent of the tip of the current branch
 
 
     ```
